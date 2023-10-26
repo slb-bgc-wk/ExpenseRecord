@@ -1,6 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Provide sufficient contrast against white background */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.box-general {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15px;
+}
+
+body {
+  background-color:aliceblue;
+}
+
 a {
   color: #0366d6;
 }
