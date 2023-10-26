@@ -10,6 +10,6 @@
 
         public int Count { get; set; }
 
-        public DateTimeOffset CreatedTime { get; set; } = DateTimeOffset.UtcNow;
+        public string CreatedTime { get; set; } = string.Empty;
     }
 }

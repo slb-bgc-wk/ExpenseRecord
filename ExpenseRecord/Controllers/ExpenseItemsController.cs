@@ -54,7 +54,8 @@ public class ExpenseItemsController : ControllerBase
         {
             Discription = requestItem.Discription,
             Type = requestItem.Type,
-            Count = requestItem.Count
+            Count = requestItem.Count,
+            CreatedTime = requestItem.Date,
         };
         _expenseItemService.Create(expenseItemDto);
         return Created("",expenseItemDto);

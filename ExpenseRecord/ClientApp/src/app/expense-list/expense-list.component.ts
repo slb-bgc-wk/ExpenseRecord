@@ -13,7 +13,8 @@ export interface Item {
 export interface ItemPost {
   Discription : string,
   Count : number,
-  Type: string
+  Type: string,
+  Date: string
 }
 
 @Component({
@@ -37,6 +38,7 @@ export class ExpenseListComponent implements OnInit, OnDestroy {
   newitem_disc = "";
   newitem_type = "";
   newitem_count = 0;
+  newitem_date = ""
 
 
   filter_items_list : Item[] = [];
@@ -173,7 +175,8 @@ export class ExpenseListComponent implements OnInit, OnDestroy {
     var newItem : ItemPost = {
       Discription : this.newitem_disc,
       Type: this.newitem_type,
-      Count: this.newitem_count
+      Count: this.newitem_count,
+      Date: this.newitem_date
     } 
     this.subscription = this.http.create(newItem).subscribe(res => {
       console.log(res);

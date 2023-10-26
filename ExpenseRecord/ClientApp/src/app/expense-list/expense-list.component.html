@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-   
+
 
 </div>
 
@@ -43,7 +43,7 @@
                         </button>
                     </th>
                     <th scope="col" class="fs-6">Count</th>
-                    <th scope="col" class="fs-6">CreatedTime
+                    <th scope="col" class="fs-6">Date
                         <button class="btn btn-outline-secondary btn-sm rounded-pill"
                             style="--bs-btn-font-size: .75rem;" (click)="onTimeSort()">
                             <div *ngIf="timeUpSort; then upIcon else downIcon"></div>
@@ -80,15 +80,17 @@
         <div class="sticky-top">
             <form #f="ngForm" class="box-general">
                 <div class="form-group">
-                    <input #discription="ngModel" [(ngModel)]="newitem_disc" name="disc"
-                        class="form-control border-end-0 border " type="text" placeholder="Discription"
-                        id="example-search-input">
-                    <input #type="ngModel" [(ngModel)]="newitem_type" name="type"
-                        class="form-control border-end-0 border " type="text" placeholder="Type"
-                        id="example-search-input">
-                    <input #count="ngModel" [(ngModel)]="newitem_count" name="count"
-                        class="form-control border-end-0 border " type="text" placeholder="Count"
-                        id="example-search-input">
+                    <div>
+                        <input #discription="ngModel" [(ngModel)]="newitem_disc" name="disc"
+                            class="form-control border-end-0 border " type="text" placeholder="Discription">
+                        <input #type="ngModel" [(ngModel)]="newitem_type" name="type"
+                            class="form-control border-end-0 border " type="text" placeholder="Type">
+                        <input #count="ngModel" [(ngModel)]="newitem_count" name="count"
+                            class="form-control border-end-0 border " type="text" placeholder="Count">
+                        <input type="date" #date="ngModel" [(ngModel)]="newitem_date" name="date"
+                        class="form-control border-end-0 border">
+                    </div>
+
                     <button class="btn btn-primary" (click)="onCreate()">Add</button>
                 </div>
             </form>
