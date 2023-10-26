@@ -22,7 +22,8 @@ export class GreetingComponent implements OnInit {
   }
 
   greet() {
-    this.callApi(this.name);
+    // this.callApi(this.name);
+    this.callApiTest()
   }
 
   callApi(name: string) {
@@ -30,5 +31,11 @@ export class GreetingComponent implements OnInit {
       .subscribe((result: string) => {
         this.greeting = result;
       }, (error: any) => console.error(error));
+  }
+
+  callApiTest() {
+    this.http.get(this.baseUrl + "api/v1/ExpenseItems").subscribe(res => {
+      console.log(res);
+    });
   }
 }

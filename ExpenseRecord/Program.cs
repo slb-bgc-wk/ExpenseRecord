@@ -1,8 +1,13 @@
+using ExpenseRecord;
+using ExpenseRecord.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IExpenseItemService, ExpenseItemService>();
 
 var app = builder.Build();
 
